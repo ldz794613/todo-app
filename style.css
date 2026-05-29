@@ -1,0 +1,220 @@
+.completed{
+    text-decoration: line-through;
+}
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F8F5E9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+/* 容器 */
+.container {
+    background-color: #6F4E37;
+    width: 100%;
+    max-width: 550px;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    color: #fff;
+}
+
+/* 标题 */
+h1 {
+    text-align: center;
+    margin-bottom: 22px;
+    font-size: 26px;
+    color: #fff;
+}
+
+/* 输入框区域 */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+#todoinput {
+    width: 100%;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    background: #fff;
+    color: #333;
+}
+
+#addBtn {
+    padding: 14px;
+    background-color: #2A7D50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#addBtn:hover {
+    background-color: #1F5F3C;
+}
+
+/* 切换按钮 */
+#toggleBtn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #3A5F3F;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#toggleBtn:hover {
+    background-color: #2D4A30;
+}
+
+/* 列表 */
+#todolist {
+    list-style: none;
+    margin-top: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 任务项 */
+#todolist li {
+    background-color: #2A7D50;
+    padding: 14px 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+}
+
+/* 已完成 */
+#todolist li.completed {
+    background-color: #3A5F3F;
+    text-decoration: line-through;
+    opacity: 0.85;
+}
+
+/* 删除按钮 */
+#todolist li button {
+    background-color: #8B3A3A;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#todolist li button:hover {
+    background-color: #6B2A2A;
+}
+
+/* ====================== 移动端适配 ====================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #todoinput,
+    #addBtn,
+    #toggleBtn {
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+    #todolist li {
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+
+    #todolist li button {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
+/* 隐藏按钮 */
+#toggleBtn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #3A5F3F;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+#toggleBtn:hover {
+    background-color: #2D4A30;
+}
+
+/* 列表 */
+#todolist {
+    list-style: none;
+    margin-top: 10px;
+}
+
+/* 单个任务 */
+#todolist li {
+    background-color: #2E8B57;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+/* 已完成样式 */
+#todolist li.completed {
+    background-color: #3A5F3F;
+    text-decoration: line-through;
+    opacity: 0.85;
+}
+
+/* 删除按钮 */
+#todolist li button {
+    background-color: #6B2F1A;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#todolist li button:hover {
+    background-color: #542414;
+}
